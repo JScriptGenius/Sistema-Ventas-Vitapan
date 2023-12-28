@@ -22,4 +22,9 @@ public class ProductoController {
         return "/producto/listaProductos";
     }
 
+    @GetMapping("/registrar-producto")
+    public String registrarProducto() {
+        return "/producto/registrarProducto";
+    }
+
 }

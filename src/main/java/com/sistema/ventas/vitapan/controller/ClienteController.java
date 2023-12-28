@@ -21,4 +21,9 @@ public class ClienteController {
     public String listaClientes() {
         return "/cliente/listaClientes";
     }
+
+    @GetMapping("/registrar-cliente")
+    public String registrarCliente() {
+        return "/cliente/registrarCliente";
+    }
 }

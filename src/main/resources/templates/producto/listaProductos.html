@@ -11,17 +11,19 @@
 <div th:include="usuario/header.html::encabezado"></div>
 
 <div class="container py-5">
-    <h1 class="mt-4 mb-3">PRODUCTOS</h1>
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Productos</a></li>
-            <li class="breadcrumb-item active">Lista</li>
-        </ol>
-    </nav>
+    <div class="alert alert-light text-center" role="alert">
+        <h1 class="mt-4 mb-3">PRODUCTOS</h1>
+        <!--        <div>-->
+        <!--            <ol class="breadcrumb">-->
+        <!--                <li class="breadcrumb-item"><a href="#">Clientes</a></li>-->
+        <!--                <li class="breadcrumb-item active">Lista</li>-->
+        <!--            </ol>-->
+        <!--        </div>-->
+    </div>
 
     <div class="mt-3 mb-3 d-flex">
-        <a class="btn btn-dark" th:href="@{#}">Nuevo +</a>
+        <a class="btn btn-dark" th:href="@{/producto/registrar-producto}">Nuevo +</a>
     </div>
 
     <table class="table table-bordered">
