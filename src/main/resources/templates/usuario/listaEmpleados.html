@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Empleados</title>
+    <!-- BOOTSTRAP CSS -->
+    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:include="usuario/header.html::encabezado"></div>
+
+<div class="container py-5">
+    <h1 class="mt-4 mb-3">EMPLEADOS</h1>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Empleados</a></li>
+            <li class="breadcrumb-item active">Lista</li>
+        </ol>
+    </nav>
+
+    <div class="mt-3 mb-3 d-flex">
+        <a class="btn btn-dark" th:href="@{#}">Nuevo +</a>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Inventario</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="1"></td>
+            <td th:text="2"></td>
+            <td th:text="3"></td>
+            <td th:text="4"></td>
+            <td th:text="5"></td>
+            <td>
+                <a class="btn btn-warning" th:href="@{#}">Editar</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" th:href="@{#}">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
