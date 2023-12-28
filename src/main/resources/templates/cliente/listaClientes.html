@@ -17,33 +17,35 @@
     </div>
 
     <div class="mt-3 mb-3 d-flex">
-        <a class="btn btn-dark" th:href="@{/cliente/registrar-cliente}">Nuevo +</a>
+        <a class="btn btn-dark" th:href="@{/cliente/nuevoCliente}">Nuevo +</a>
     </div>
 
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th scope="col">Id</th>
+            <th scope="col">ID</th>
+            <th scope="col">DNI</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Inventario</th>
-            <th scope="col">Precio</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Teléfono</th>
             <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td th:text="1"></td>
-            <td th:text="2"></td>
-            <td th:text="3"></td>
-            <td th:text="4"></td>
-            <td th:text="5"></td>
+        <tr th:each="client : ${clientes}" th:object="${client}">
+            <td th:text="*{idCliente}"></td>
+            <td th:text="*{dni}"></td>
+            <td th:text="*{nombre}"></td>
+            <td th:text="*{apellido}"></td>
+            <td th:text="*{direccion}"></td>
+            <td th:text="*{telefono}"></td>
             <td>
-                <a class="btn btn-warning" th:href="@{#}">Editar</a>
+                <a class="btn btn-warning" th:href="@{/cliente/editarCliente/{idCliente} (idCliente=*{idCliente})}">Editar</a>
             </td>
             <td>
-                <a class="btn btn-danger" th:href="@{#}">Eliminar</a>
+                <a class="btn btn-danger" th:href="@{/cliente/eliminarCliente/{idCliente} (idCliente=*{idCliente})}">Eliminar</a>
             </td>
         </tr>
         </tbody>
