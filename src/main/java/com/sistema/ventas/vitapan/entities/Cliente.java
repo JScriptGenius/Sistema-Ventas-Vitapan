@@ -20,5 +20,5 @@ public class Cliente {
     private String apellido;
     private String direccion;
     private String telefono;
-    private byte estado;
+    private int estado;
 }

@@ -16,10 +16,10 @@
         <h1 class="mt-4 mb-3">NUEVO PRODUCTO</h1>
     </div>
 
-    <form >
+    <form th:action="@{/producto/guardarProducto}" method="post">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre del producto">
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del producto" required autocomplete="off">
         </div>
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción:</label>
@@ -28,14 +28,14 @@
         </div>
         <div class="mb-3">
             <label for="precio" class="form-label">Precio:</label>
-            <input type="number" class="form-control" id="precio" placeholder="Precio del producto">
+            <input type="number" class="form-control" id="precio" step="any" name="precio" placeholder="Precio del producto" required autocomplete="off">
         </div>
         <div class="mb-3">
             <label for="stock" class="form-label">Stock:</label>
-            <input type="number" class="form-control" id="stock" placeholder="Stock">
+            <input type="number" class="form-control" id="stock" name="stock" placeholder="Stock" required autocomplete="off">
         </div>
-        <button type="submit" class="btn btn-secondary">Guardar</button>
-        <button type="submit" class="btn btn-danger">Cancelar</button>
+        <button type="submit" class="btn btn-success">Guardar</button>
+<!--        <button type="submit" class="btn btn-danger">Cancelar</button>-->
     </form>
 </div>
 

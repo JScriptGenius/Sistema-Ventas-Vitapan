@@ -19,5 +19,5 @@ public class Producto {
     private String descripcion;
     private Double precio;
     private Integer stock;
-    private byte estado;
+    private int estado;
 }

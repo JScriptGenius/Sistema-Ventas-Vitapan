@@ -21,5 +21,5 @@ public class Empleado {
     private String direccion;
     private String telefono;
     private String usuario;
-    private byte estado;
+    private int estado;
 }
